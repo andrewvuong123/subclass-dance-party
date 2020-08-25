@@ -1,16 +1,16 @@
-var makeSquidDancer = function(top, left, timeBetweenSteps) {
+var makePennywise = function(top, left, timeBetweenSteps) {
   // call statement
   makeDancer.call(this, top, left, timeBetweenSteps);
-  this.$node = $('<img class="squid" src="img/squidward.gif"></img>');
+  this.$node = $('<img class="pennywise" src="img/pennywise.gif"></img>');
 };
 
 // prototype chain
-makeSquidDancer.prototype = Object.create(makeDancer.prototype);
+makePennywise.prototype = Object.create(makeDancer.prototype);
 
 // constructor
-makeSquidDancer.prototype.constructor = makeSquidDancer;
+makePennywise.prototype.constructor = makePennywise;
 
-makeSquidDancer.prototype.step = function() {
+makePennywise.prototype.step = function() {
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
   // so we must keep a copy of the old version of this function
   // call the old version of step at the beginning of any call to this new version of step
